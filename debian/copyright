@@ -1,0 +1,15 @@
+This package was debianized by Thorsten Sauter <tsauter@gmx.net> on
+Fri, 29 Nov 2002 15:52:05 +0100.
+
+It was downloaded from http://www.systrace.org/
+
+Upstream Author: Niels Provos <provos@citi.umich.edu>
+
+Copyright:
+
+This software is copyright (c) 2002 by Niels Provos
+You are free to distribute this software under the terms of
+the BSD License.
+On Debian systems, the complete text of the BSD License
+can be found in /usr/share/common-licenses/BSD file.
+

@@ -1,0 +1,23 @@
+#!/usr/bin/make -f
+
+DEB_TAR_SRCDIR := notification-0.1
+DEB_BUILDDIR = $(DEB_SRCDIR)
+DEB_INSTALL_MANPAGES_xsystrace := debian/xsystrace.1
+
+include /usr/share/cdbs/1/rules/debhelper.mk
+include /usr/share/cdbs/1/class/autotools.mk
+include /usr/share/cdbs/1/rules/tarball.mk
+include /usr/share/cdbs/1/rules/simple-patchsys.mk
+
+binary-post-install/xsystrace::
+	# move binary to /usr/lib/xsystrace
+	install -d -m755 $(CURDIR)/debian/xsystrace/usr/lib/xsystrace
+	mv $(CURDIR)/debian/xsystrace/usr/bin/notification \
+		$(CURDIR)/debian/xsystrace/usr/lib/xsystrace/xsystrace
+	install -m755 -d $(CURDIR)/debian/xsystrace/usr/share/pixmaps/xsystrace
+	mv $(CURDIR)/debian/xsystrace/usr/share/notification/pixmaps/* \
+		$(CURDIR)/debian/xsystrace/usr/share/pixmaps/xsystrace/
+	# cleanup unused directories
+	rm -fr $(CURDIR)/debian/xsystrace/usr/bin
+	rm -fr $(CURDIR)/debian/xsystrace/usr/share/notification
+

@@ -1,0 +1,13 @@
+diff -Naur notification-0.1/src/main.c notification-0.1.new/src/main.c
+--- notification-0.1/src/main.c	2003-07-26 03:13:11.000000000 +0200
++++ notification-0.1.new/src/main.c	2003-07-26 03:14:22.000000000 +0200
+@@ -310,8 +310,7 @@
+ 	gtk_set_locale ();
+ 	gtk_init (&argc, &argv);
+ 
+-	add_pixmap_directory (PACKAGE_DATA_DIR "/pixmaps");
+-	add_pixmap_directory (PACKAGE_SOURCE_DIR "/pixmaps");
++	add_pixmap_directory ("/usr/share/pixmaps/xsystrace");
+ 
+ 	/*
+ 	 * The following code was added by Glade to create one of each component

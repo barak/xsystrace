@@ -1,0 +1,88 @@
+xsystrace (1:20030623-3) unstable; urgency=low
+
+  * Update dependany on systrace to an new version (2004-03-26)
+  * Update suggestions on kernel-patch-systrace to an new version (1.5)
+
+ -- Thorsten Sauter <tsauter@debian.org>  Wed, 31 Mar 2004 17:31:59 +0200
+
+xsystrace (1:20030623-2) unstable; urgency=low
+
+  * Update standards version.
+
+ -- Thorsten Sauter <tsauter@debian.org>  Wed, 22 Oct 2003 23:13:09 +0200
+
+xsystrace (1:20030623-1) unstable; urgency=low
+
+  * New upstream version.
+  * debian/rules: use cdbs for building
+  * debian/control:
+    - update standards version
+    - include cdbs package into build-depends
+  * put the upstream tarball in the orig.tar
+  * use the cdbs patching system
+
+ -- Thorsten Sauter <tsauter@debian.org>  Sat, 26 Jul 2003 03:02:50 +0200
+
+xsystrace (1:20021201-2) unstable; urgency=low
+
+  * debian/control:
+    - change my email addresss
+    - update standards version
+    - depend on newer systrace and kernel-patch-systrace versions
+
+ -- Thorsten Sauter <tsauter@debian.org>  Fri, 20 Jun 2003 15:33:19 +0200
+
+xsystrace (1:20021201-1) unstable; urgency=low
+
+  * New upstream version.
+  * Change versioning schema
+  * debian/control:
+    - update standards version
+    - depends on newer systrace version
+    - suggest newer kernel-patch-systrace version
+  * debian/(rules|compat): change debhelper compat handling
+  * debian/docs: remove
+
+ -- Thorsten Sauter <tsauter@gmx.net>  Sat, 22 Mar 2003 22:54:51 +0100
+
+xsystrace (0.1-5) unstable; urgency=low
+
+  * debian/dirs: remove unused directories, insert new install directory
+  * debian/copyright: change project homepage
+  * Closes: #181401
+      - remove unhelpful README file
+      - fix typos in man-page
+      - move xsystrace binary out of the default $PATH
+  * debian/control: change dependancy to the new systrace version (see PATH)
+
+ -- Thorsten Sauter <tsauter@gmx.net>  Wed, 12 Mar 2003 16:21:14 +0100
+
+xsystrace (0.1-4) unstable; urgency=low
+
+  * remove the automatic copy of config.{sub,guess} files
+
+ -- Thorsten Sauter <tsauter@gmx.net>  Tue, 14 Jan 2003 22:15:59 +0100
+
+xsystrace (0.1-3) unstable; urgency=low
+
+  * remove the silly test file in diff.gz
+  * copy the config.* files each build time from /usr/share/misc/
+
+ -- Thorsten Sauter <tsauter@gmx.net>  Mon, 13 Jan 2003 20:37:09 +0100
+
+xsystrace (0.1-2) unstable; urgency=low
+
+  * debian/control:
+       - fix typo in email adress
+       - include suggestion for kernel-patch-systrace
+  * debian/rules: don't install empty files (NEWS, ChangeLog)
+
+ -- Thorsten Sauter <tsauter@gmx.net>  Thu, 12 Dec 2002 20:47:21 +0100
+
+xsystrace (0.1-1) unstable; urgency=low
+
+  * First upload to debian directory. Close ITP (Closes: #171274)
+  * Initial Release.
+
+ -- Thorsten Sauter <tsauter@gmx.net>  Fri, 29 Nov 2002 15:52:05 +0100
+

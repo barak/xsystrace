@@ -1,0 +1,23 @@
+Source: xsystrace
+Section: x11
+Priority: optional
+Maintainer: Thorsten Sauter <tsauter@debian.org>
+Build-Depends: cdbs, debhelper (>= 4.1.0), libgtk1.2-dev
+Standards-Version: 3.6.1
+
+Package: xsystrace
+Architecture: i386
+Depends: ${shlibs:Depends}, systrace (>= 1:20040126-1)
+Suggests: kernel-patch-systrace (>= 1.5-1)
+Description: Systrace frontend invoked by systrace
+ Systrace enforces system call policies for applications by
+ constraining the application's access to the system. The
+ policy is generated interactively. Operations not covered
+ by the policy raise an alarm and allow an user to refine the
+ currently configured policy.
+ .
+ This program will be execute if systrace runs in interactive
+ mode and create the rules based on the inputs and selections
+ in this frontend. It is also a gui to help creating permit or
+ deny rules for systrace templates.
+
