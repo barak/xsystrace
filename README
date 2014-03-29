@@ -1,0 +1,12 @@
+gtk frontend for systrace
+-------------------------
+
+To make the source, 
+
+$ ./autogen.sh
+$ make
+$ make install
+
+To use the gtk frontend with systrace, do
+
+$ cd /usr/X11R6/bin && ln -s /usr/local/bin/notification xsystrace
