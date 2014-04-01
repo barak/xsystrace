@@ -1,13 +1,15 @@
 Source: xsystrace
 Section: x11
 Priority: optional
-Maintainer: Thorsten Sauter <tsauter@debian.org>
-Build-Depends: cdbs, debhelper (>= 4.1.0), libgtk1.2-dev
-Standards-Version: 3.6.1
+Maintainer: Barak A. Pearlmutter <bap@debian.org>
+Build-Depends: cdbs, debhelper (>= 9), dh-autoreconf,
+	       libgtk2.0-dev
+Standards-Version: 3.9.5
+Homepage: http://www.systrace.org
 
 Package: xsystrace
-Architecture: i386
-Depends: ${shlibs:Depends}, systrace (>= 1:20040126-1)
+Architecture: i386 amd64
+Depends: ${shlibs:Depends}, ${misc:Depends}, systrace
 Suggests: kernel-patch-systrace (>= 1.5-1)
 Description: Systrace frontend invoked by systrace
  Systrace enforces system call policies for applications by
@@ -20,4 +22,3 @@ Description: Systrace frontend invoked by systrace
  mode and create the rules based on the inputs and selections
  in this frontend. It is also a gui to help creating permit or
  deny rules for systrace templates.
-

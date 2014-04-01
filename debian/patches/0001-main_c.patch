@@ -1,0 +1,22 @@
+From: Thorsten Sauter <tsauter@debian.org>
+Date: Tue, 1 Apr 2014 11:04:46 +0100
+Subject: main_c
+
+---
+ src/main.c | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+diff --git a/src/main.c b/src/main.c
+index a089f69..e6c94c5 100644
+--- a/src/main.c
++++ b/src/main.c
+@@ -313,8 +313,7 @@ main (int argc, char *argv[])
+ 	gtk_set_locale ();
+ 	gtk_init (&argc, &argv);
+ 
+-	add_pixmap_directory (PACKAGE_DATA_DIR "/pixmaps");
+-	add_pixmap_directory (PACKAGE_SOURCE_DIR "/pixmaps");
++	add_pixmap_directory ("/usr/share/pixmaps/xsystrace");
+ 
+ 	/*
+ 	 * The following code was added by Glade to create one of each component
