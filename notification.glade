@@ -622,7 +622,7 @@ eacces
       <widget>
 	<class>GtkButton</class>
 	<name>button2</name>
-	<tooltip>Denies the current system call.  The error code above is returned to the application.  The application is allows to attempt the system call again.</tooltip>
+	<tooltip>Denies the current system call.  The error code above is returned to the application.  The application is allowed to attempt the system call again.</tooltip>
 	<can_focus>True</can_focus>
 	<signal>
 	  <name>clicked</name>
@@ -807,7 +807,7 @@ Always</label>
       <widget>
 	<class>GtkButton</class>
 	<name>button5</name>
-	<tooltip>Permit this system call for ever.  No more monitoring of this system call is happening.  No more warnings will be generated.  Use this very carefully.</tooltip>
+	<tooltip>Permit this system call forever.  No more monitoring of this system call is happening.  No more warnings will be generated.  Use this very carefully.</tooltip>
 	<can_focus>True</can_focus>
 	<signal>
 	  <name>clicked</name>
