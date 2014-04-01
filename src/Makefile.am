@@ -3,6 +3,10 @@
 INCLUDES = \
 	@GTK_CFLAGS@
 
+AM_CPPFLAGS = \
+ -DPACKAGE_DATA_DIR='"$(pkgdatadir)"' \
+ -DPACKAGE_SOURCE_DIR='"$(abs_top_srcdir)"'
+
 bin_PROGRAMS = notification
 
 notification_SOURCES = \
