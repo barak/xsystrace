@@ -23,7 +23,7 @@ if test "x$GCC" = "xyes"; then
 fi
 changequote([,])dnl
 
-AC_REPLACE_FUNCS(strlcpy strlcat)
+AC_SEARCH_LIBS([strlcpy],[bsd])
 
 AC_OUTPUT([
 Makefile

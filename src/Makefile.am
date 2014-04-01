@@ -1,6 +1,6 @@
 ## Process this file with automake to produce Makefile.in
 
-INCLUDES = \
+AM_CFLAGS = \
 	@GTK_CFLAGS@
 
 AM_CPPFLAGS = \
