@@ -1,3 +1,10 @@
+xsystrace (2:2003.06.23-1) unstable; urgency=medium
+
+  * Patch sources for modernity
+  * Update packaging
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Tue, 01 Apr 2014 12:00:17 +0100
+
 xsystrace (1:20030623-3) unstable; urgency=low
 
   * Update dependany on systrace to an new version (2004-03-26)
