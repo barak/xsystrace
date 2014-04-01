@@ -1,0 +1,31 @@
+dnl Process this file with autoconf to produce a configure script.
+
+AC_INIT([notification],[0.1])
+AM_INIT_AUTOMAKE([foreign subdir-objects -Wall])
+AM_CONFIG_HEADER(config.h)
+
+AC_ISC_POSIX
+AC_PROG_CC
+AM_PROG_CC_STDC
+AC_HEADER_STDC
+
+PKG_CHECK_MODULES([GTK],[gtk+-2.0])
+
+AC_CHECK_HEADERS([bsd/string.h])
+
+dnl Use -Wall if we have gcc.
+changequote(,)dnl
+if test "x$GCC" = "xyes"; then
+  case " $CFLAGS " in
+  *[\ \	]-Wall[\ \	]*) ;;
+  *) CFLAGS="$CFLAGS -Wall" ;;
+  esac
+fi
+changequote([,])dnl
+
+AC_SEARCH_LIBS([strlcpy],[bsd])
+
+AC_OUTPUT([
+Makefile
+src/Makefile
+])

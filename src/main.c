@@ -21,6 +21,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#ifdef HAVE_BSD_STRING_H
+#include <bsd/string.h>
+#endif
 #include <libgen.h>
 #include <ctype.h>
 #include <errno.h>
@@ -334,7 +337,7 @@ main (int argc, char *argv[])
 	filterentry = lookup_widget(GTK_WIDGET(systracewin), "filterentry");
 	default_style = gtk_widget_get_style(processname);
 	red_style = make_color(default_style, 0xd000, 0x1000, 0);
-	red_style->font = gdk_font_load("-*-helvetica-bold-r-normal--*-140-*-*-*-*-iso8859-1");
+	red_style->private_font = gdk_font_load("-*-helvetica-bold-r-normal--*-140-*-*-*-*-iso8859-1");
 	gtk_widget_set_style(processname, red_style);
 	gtk_widget_set_style(processid, red_style);
 	gtk_widget_set_style(policyname, red_style);

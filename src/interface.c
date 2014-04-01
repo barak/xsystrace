@@ -430,7 +430,7 @@ create_systracewin (void)
                             (GtkDestroyNotify) gtk_widget_unref);
   gtk_widget_show (button2);
   gtk_box_pack_start (GTK_BOX (hbox7), button2, FALSE, FALSE, 0);
-  gtk_tooltips_set_tip (tooltips, button2, "Denies the current system call.  The error code above is returned to the application.  The application is allows to attempt the system call again.", NULL);
+  gtk_tooltips_set_tip (tooltips, button2, "Denies the current system call.  The error code above is returned to the application.  The application is allowed to attempt the system call again.", NULL);
 
   hbox8 = gtk_hbox_new (FALSE, 0);
   gtk_widget_ref (hbox8);
@@ -530,7 +530,7 @@ create_systracewin (void)
                             (GtkDestroyNotify) gtk_widget_unref);
   gtk_widget_show (button5);
   gtk_box_pack_start (GTK_BOX (hbox7), button5, FALSE, FALSE, 0);
-  gtk_tooltips_set_tip (tooltips, button5, "Permit this system call for ever.  No more monitoring of this system call is happening.  No more warnings will be generated.  Use this very carefully.", NULL);
+  gtk_tooltips_set_tip (tooltips, button5, "Permit this system call forever.  No more monitoring of this system call is happening.  No more warnings will be generated.  Use this very carefully.", NULL);
 
   hbox10 = gtk_hbox_new (FALSE, 0);
   gtk_widget_ref (hbox10);

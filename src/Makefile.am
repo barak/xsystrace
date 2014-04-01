@@ -1,7 +1,11 @@
 ## Process this file with automake to produce Makefile.in
 
-INCLUDES = \
+AM_CFLAGS = \
 	@GTK_CFLAGS@
+
+AM_CPPFLAGS = \
+ -DPACKAGE_DATA_DIR='"$(pkgdatadir)"' \
+ -DPACKAGE_SOURCE_DIR='"$(abs_top_srcdir)"'
 
 bin_PROGRAMS = notification
 
