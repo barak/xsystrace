@@ -3,7 +3,8 @@ gtk frontend for systrace
 
 To make the source, 
 
-$ ./autogen.sh
+$ autoreconf --install
+$ ./configure
 $ make
 $ make install
 
