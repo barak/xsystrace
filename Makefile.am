@@ -3,7 +3,6 @@
 SUBDIRS = src
 
 EXTRA_DIST = \
-	autogen.sh \
 	notification.glade
 
 pixmapsdir=$(pkgdatadir)/pixmaps
