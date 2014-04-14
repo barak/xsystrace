@@ -2,12 +2,10 @@ dnl Process this file with autoconf to produce a configure script.
 
 AC_INIT([notification],[0.1])
 AM_INIT_AUTOMAKE([foreign subdir-objects -Wall])
-AM_CONFIG_HEADER(config.h)
+AC_CONFIG_HEADERS([config.h])
 
-AC_ISC_POSIX
+AC_SEARCH_LIBS([strerror],[cposix])
 AC_PROG_CC
-AM_PROG_CC_STDC
-AC_HEADER_STDC
 
 PKG_CHECK_MODULES([GTK],[gtk+-2.0])
 
@@ -25,7 +23,8 @@ changequote([,])dnl
 
 AC_SEARCH_LIBS([strlcpy],[bsd])
 
-AC_OUTPUT([
+AC_CONFIG_FILES([
 Makefile
 src/Makefile
 ])
+AC_OUTPUT
